@@ -29,11 +29,11 @@
   $retorno   = mysqli_fetch_array($pesquisar, MYSQLI_ASSOC);
 
   if($retorno['nome'] == $user && $user != NULL){
-     header("Location: http://127.0.0.1/Testes_Freela/Chat.php");
+     header("Location: http://127.0.0.1/Chat.php");
      $_SESSION['nome'] = $user;
   }
   else{
-    header("Location: http://127.0.0.1/Testes_Freela/login.php");
+    header("Location: http://127.0.0.1/login.php");
     unset($_SESSION['nome']);
   }
 
