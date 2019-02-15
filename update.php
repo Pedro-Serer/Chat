@@ -4,7 +4,7 @@
   if(!isset($_SESSION['nome'])){
     session_destroy();
     unset($_SESSION['nome']);
-    header("Location: http://127.0.0.1/Testes_Freela/login.php");
+    header("Location: http://127.0.0.1/login.php");
   }
 
   $conectar    = mysqli_connect("127.0.0.1", "root", "", "test");
@@ -31,7 +31,7 @@
   }
   else{
     echo "<script>alert('Erro ao atualizar!')</script>";
-    header("Location: http://127.0.0.1/Testes_Freela/Chat.php");
+    header("Location: http://127.0.0.1/Chat.php");
   }
 
 ?>
