@@ -16,7 +16,7 @@
   $atualizar = mysqli_query($conectar, "UPDATE usuario SET nome = '$xsSqi' WHERE nome = '$logado' LIMIT 1");
   if($atualizar != false){
     echo "<script>alert('Dados atualizados com sucesso!')</script>";
-    echo "<center> <a href='http://127.0.0.1/Testes_Freela/login.php'> Acesse com seu novo nome! </a> </center>";
+    echo "<center> <a href='http://127.0.0.1/login.php'> Acesse com seu novo nome! </a> </center>";
 
     date_default_timezone_set("America/Sao_Paulo");
     $select_bk   = mysqli_query($conectar, "SELECT * FROM usuario");
