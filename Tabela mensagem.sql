@@ -1,0 +1,9 @@
+CREATE TABLE test_msg( 
+	IDMsg INT NOT NULL AUTO_INCREMENT, 
+	ID_Usr INT NOT NULL, 
+	Msg MEDIUMTEXT, 
+	DataHora VarChar(30), 
+	PRIMARY KEY(IDMsg), 
+	FOREIGN KEY(ID_Usr) 
+	REFERENCES teste_user (ID) 
+);
