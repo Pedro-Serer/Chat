@@ -8,8 +8,11 @@
     echo "Erro na conexão com banco de dados ".mysqli_connect_error();
   }
 
-  if($cria != " " && $cria != 0){
-    $inserir = mysqli_query($conectar, "INSERT INTO usuario VALUES(DEFAULT, '$cria')");
+  if($cria != NULL){
+    $xss         = array("<", ">");  //filtro basicão
+    $msgXss      = str_replace($xss, " ", $cria);
+
+    $inserir = mysqli_query($conectar, "INSERT INTO usuario VALUES(DEFAULT, '$msgXss')");
 
     date_default_timezone_set("America/Sao_Paulo");
     $select_bk   = mysqli_query($conectar, "SELECT * FROM usuario");
